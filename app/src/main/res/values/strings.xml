@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Shop smart</string>
+    <string name="shopping_limit">Shopping limit</string>
+    <string name="select_items">Select items</string>
+    <string name="_12">$12</string>
+    <string name="_24">$24</string>
+    <string name="_18">$18</string>
+    <string name="_10">$10</string>
+    <string name="_220">$220</string>
+    <string name="total">Total</string>
+    <string name="_0">0</string>
+</resources>

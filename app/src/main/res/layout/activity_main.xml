@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            android:hint="@string/shopping_limit"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvSelectItemsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilLimit"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="@string/select_items">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/rlBackpack"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.5"
+        android:background="@drawable/item_frame"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectItemsLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rlPants"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:src="@drawable/ic_backpack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/_24" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbBackPack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"
+            android:layout_margin="0dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPants"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.5"
+        android:background="@drawable/item_frame"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectItemsLabel"
+        app:layout_constraintStart_toEndOf="@id/rlBackpack"
+        app:layout_constraintEnd_toStartOf="@id/rlShirt"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:src="@drawable/ic_pants" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="$18" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbPants"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"
+            android:layout_margin="0dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlShirt"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.5"
+        android:background="@drawable/item_frame"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectItemsLabel"
+        app:layout_constraintStart_toEndOf="@id/rlPants"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:src="@drawable/ic_shirt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/_12" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbShirt"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"
+            android:layout_margin="0dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBall"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.5"
+        android:background="@drawable/item_frame"
+        app:layout_constraintTop_toBottomOf="@id/rlBackpack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rlPiano"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:src="@drawable/ic_ball" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/_10" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbBall"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"
+            android:layout_margin="0dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPiano"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.5"
+        android:background="@drawable/item_frame"
+        app:layout_constraintTop_toBottomOf="@id/rlBackpack"
+        app:layout_constraintStart_toEndOf="@id/rlBall"
+        app:layout_constraintEnd_toStartOf="@id/rlCar"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:src="@drawable/ic_piano" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/_220" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbPiano"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"
+            android:layout_margin="0dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.5"
+        android:background="@drawable/item_frame"
+        app:layout_constraintTop_toBottomOf="@id/rlBackpack"
+        app:layout_constraintStart_toEndOf="@id/rlPiano"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:src="@drawable/ic_car" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="$28000" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbCar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:enabled="false"
+            android:layout_marginEnd="4dp"
+            android:layout_margin="0dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rlBall"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/total"/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rlBall"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/tvTotalLabel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
